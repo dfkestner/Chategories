@@ -18,7 +18,7 @@ const LoginPage = (props) => {
       .then((response) => {
         makeToast("success", response.data.message);
         localStorage.setItem("CC_Token", response.data.token);
-        props.history.push("/dashboard");
+        props.history.push("/home");
       })
       .catch((err) => {
         // console.log(err);
