@@ -4,9 +4,8 @@ const app = express();
 app.use(require('cors')());
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 app.use("/user", require("./routes/user"));
-app.use("/chatroom", require("./routes/chatroom"));
+app.use("/topic", require("./routes/topic"));
 //Setup Error Handlers
 const errorHandlers = require("./handlers/errorHandlers");
 app.use(errorHandlers.notFound);
