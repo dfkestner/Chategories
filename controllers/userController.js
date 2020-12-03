@@ -4,7 +4,7 @@ const sha256 = require("js-sha256");
 const jwt = require("jwt-then");
 
 exports.register = async (req, res) => {
-  const { name, email, password } = req.body;
+  const { username, email, password } = req.body;
 
   const emailRegex = /@gmail.com|@yahoo.com|@hotmail.com|@live.com/;
 
@@ -18,7 +18,7 @@ exports.register = async (req, res) => {
   if (userExists) throw "User with same email already exits.";
 
   const user = new User({
-    name,
+    username,
     email,
     password: sha256(password + process.env.SALT),
   });
@@ -26,7 +26,7 @@ exports.register = async (req, res) => {
   await user.save();
 
   res.json({
-    message: "User [" + name + "] registered successfully!",
+    message: "User [" + username + "] registered successfully!",
   });
 };
 

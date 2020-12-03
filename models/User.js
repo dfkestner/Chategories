@@ -2,9 +2,9 @@ const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema(
   {
-    name: {
+    username: {
       type: String,
-      required: "Name is required!",
+      required: "User name is required!",
     },
     email: {
       type: String,
@@ -14,6 +14,24 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: "Password is required!",
     },
+    img: {
+      type: String
+    },
+    bio: {
+        type: String,
+    },
+    profileChategories: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Chategory'
+      }
+    ],
+    profileTopics: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Topic'
+      }
+    ]
   },
   {
     timestamps: true,

@@ -6,15 +6,22 @@ const messageSchema = new mongoose.Schema({
     required: "Topic is required!",
     ref: "Topic",
   },
-  user: {
+  sender: {
     type: mongoose.Schema.Types.ObjectId,
     required: "Topic is required!",
     ref: "User",
   },
+  user: {
+    type: String
+  },
   message: {
     type: String,
     required: "Message is required!",
-  },
-});
+  } 
+},
+{
+  timestamps: true,
+}
+);
 
 module.exports = mongoose.model("Message", messageSchema);
