@@ -7,7 +7,7 @@ const IndexPage = (props) => {
     if (!token) {
       props.history.push("/login");
     } else {
-      props.history.push("/dashboard");
+      props.history.push("/home");
     }
     // eslint-disable-next-line
   }, [0]);
