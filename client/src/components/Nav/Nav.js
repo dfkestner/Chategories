@@ -1,14 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, Toolbar, IconButton, Typography, Button } from '@material-ui/core';
+import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 import HomeIcon from '@material-ui/icons/Home';
 import HelpIcon from '@material-ui/icons/Help';
 
-{/* <Button color="inherit">Login</Button> */}
-
-
+// {/* <Button color="inherit">Login</Button> */}
 
 const useStyles = makeStyles((theme) => ({
     root: {
