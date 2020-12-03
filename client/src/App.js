@@ -4,7 +4,7 @@ import LoginPage from "./Pages/loginpage";
 import RegisterPage from "./Pages/registerpage";
 import DashboardPage from "./Pages/dashboard";
 import IndexPage from "./Pages/indexpage";
-import ChatroomPage from "./Pages/chatroompage";
+import TopicPage from "./Pages/topicpage";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Route path="/login" component={LoginPage} exact />
         <Route path="/register" component={RegisterPage} exact />
         <Route path="/dashboard" component={DashboardPage} exact />
-        <Route path="/chatroom/:id" component={ChatroomPage} exact />
+        <Route path="/topic/:id" component={TopicPage} exact />
         
       </Switch>
     </BrowserRouter>

@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 mongoose.connect(process.env.DATABASE, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
+  useCreateIndex: true,
+  useFindAndModify: false
 });
 
 mongoose.connection.on("error", (err) => {
@@ -16,7 +18,7 @@ mongoose.connection.once("open", () => {
 
 //Bring in the models
 require("./models/User");
-require("./models/Chatroom");
+require("./models/Topic");
 require("./models/Message");
 
 const app = require("./app");
